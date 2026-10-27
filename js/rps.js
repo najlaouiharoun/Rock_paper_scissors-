@@ -1,4 +1,3 @@
-
 //create initial scoreboard to keep track of wins and losses
 // take a user input and save it in variable humanChoice
 //randomize the computers choice using the rand function and save it in variable ComputerChoice 
@@ -8,3 +7,4 @@
 
 
 console.log(getComputerChoice());
+console.log(getHumanChoice());
