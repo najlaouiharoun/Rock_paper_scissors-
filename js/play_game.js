@@ -7,10 +7,15 @@
 let humanScore = 0
 let computerScore = 0 
 let round = 5
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+
 function playGame() {
     //call the playRound X amount of rounds and then increment the appropriate score
     for (let i = 1; i <= round; i++) {
-        let winner = playRound(getHumanChoice(),getComputerChoice())
+
+        let winner = playRound(humanSelection,computerSelection)
         switch (winner) {
             case "computer":
                 computerScore++
