@@ -4,7 +4,10 @@
 //compare the choice and display the winner
 //update the scoreboard for the winner
 //ask if user wants to play another round, if yes: go again, if no, exit
+let humanScore = 0
+let conputerScore = 0 
 
-
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+function rps() {
+    console.log(playRound(getHumanChoice(),getComputerChoice()));
+}
+rps()
