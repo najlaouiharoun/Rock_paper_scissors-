@@ -8,21 +8,21 @@ function playRound(humanChoice, ComputerChoice) {
     //process ties
     if (humanChoice ===ComputerChoice) {
         console.log("it's a tie! both players chose " + humanChoice);
-        return 0       
+        return "tie"       
     }
     //go case by case to find the winner and loser
     switch (humanChoice) {
-        
+
         case "rock":
             switch (ComputerChoice) {
                 case "scissors":
                     winMessage(humanChoice,ComputerChoice)
-                    return 1
+                    return "human"
                     break;
             
                 default:
                     loseMessage(humanChoice,ComputerChoice)
-                    return -1
+                    return "computer"
 
                     break;
             }
@@ -32,13 +32,13 @@ function playRound(humanChoice, ComputerChoice) {
             switch (ComputerChoice) {
                 case "rock":
                     winMessage(humanChoice,ComputerChoice)
-                    return 1
+                    return "human"
 
                     break;
                 
                 default:
                     loseMessage(humanChoice,ComputerChoice)
-                    return -1
+                    return "computer"
                     break;
             }
             
@@ -47,13 +47,13 @@ function playRound(humanChoice, ComputerChoice) {
             switch (ComputerChoice) {
                 case "paper":
                     winMessage(humanChoice,ComputerChoice)
-                    return 1
+                    return "human"
 
                     break;
             
                 default:
                     loseMessage(humanChoice,ComputerChoice)
-                    return -1
+                    return "computer"
                     break;
             }
             
