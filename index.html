@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rps</title>
-    <script  src="js/play_round.js"></script>
 
+    <link rel="stylesheet" href="css/styles.css">
+    <script  src="js/events.js" defer></script>
+    <script  src="js/play_round.js" defer></script>
     <script  src="js/rand.js"></script>
-    <script  src="js/get_human_choice.js"></script>
+    <script  src="js/get_human_choice.js" defer></script>
+    <script  src="js/get_computer_choice.js" defer></script>
+    <script  src="js/play_game.js" defer></script>
+    <script  src="js/main.js" defer></script>
 
-    <script  src="js/get_computer_choice.js"></script>
-
-    <script  src="js/play_game.js"></script>
 </head>
 <body>
-    
+    <div class="score-board" id="score-board">0-0</div>
+    <ul id="rps-choice-list">
+        <li><button id="rock">rock</button></li>
+        <li><button id="paper">paper</button></li>
+        <li><button id="rock">scissors</button></li>
+
+    </ul>    
+    <div class="win-message" id="win-message">0-0</div>
+
 </body>
 </html>

@@ -1,20 +1,6 @@
-//create initial scoreboard to keep track of wins and losses
-// take a user input and save it in variable humanChoice
-//randomize the computers choice using the rand function and save it in variable ComputerChoice 
-//compare the choice and display the winner
-//update the scoreboard for the winner
-//ask if user wants to play another round, if yes: go again, if no, exit
-let humanScore = 0
-let computerScore = 0 
-let round = 5
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-
-function playGame() {
-    //call the playRound X amount of rounds and then increment the appropriate score
-    for (let i = 1; i <= round; i++) {
-
+function playGame(humanSelection,rounds,humanScore,computerScore) {
+        computerSelection = getComputerChoice();
         let winner = playRound(humanSelection,computerSelection)
         switch (winner) {
             case "computer":
@@ -27,9 +13,8 @@ function playGame() {
                 
                 break;
         }
-    }
-    //show the final score:
-    console.log("final score! computer: " + computerScore + "   human:" + humanScore);
-    
+    rounds++        
+    //hotfix. the values aren't being modified after leaving the function scope
+    return [rounds,humanScore,computerScore]
+
 }
-playGame()
