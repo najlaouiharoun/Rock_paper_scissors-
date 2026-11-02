@@ -11,8 +11,9 @@ rpsChoiceList.addEventListener("click",(event)=>{
         rounds = outcome[0]
         humanScore = outcome[1]
         computerScore = outcome[2] 
+        soreBoardMessage(rounds,humanScore,computerScore) 
         if (rounds === 5) {
-            console.log("final score! computer: " + computerScore + "   human:" + humanScore);
+            appendRoundHistory(humanScore,computerScore);
             rounds = 0;
             computerScore = 0;
             humanScore = 0;
@@ -20,4 +21,16 @@ rpsChoiceList.addEventListener("click",(event)=>{
     }
 
 })
+}
+
+function soreBoardMessage(rounds,humanScore,computerScore) {
+    scoreBoard = document.querySelector("#score-board")
+    scoreBoard.textContent = "ROUND " + rounds + " PLAYER SCORE: " +humanScore + " COMPUTER SCORE: " + computerScore
+}
+
+function appendRoundHistory(humanScore,computerScore) {
+    roundHistory = document.querySelector("#round-history")
+    winnerOfTheSet = document.createElement("div")
+    winnerOfTheSet.textContent = "Set:  " + (roundHistory.childElementCount + 1) + " final score! computer: " + computerScore + "   human:" + humanScore;
+    roundHistory.appendChild(winnerOfTheSet)
 }

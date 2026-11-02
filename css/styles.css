@@ -3,7 +3,8 @@ body{
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    height: 100vh;          
+    height: 100vh;    
+    gap: 50px;      
     
 }
 ul{
@@ -13,7 +14,15 @@ ul{
     display: flex; 
     align-content: center;
     justify-content: center;
+    gap: 20px;
 }
 div{
     text-align: center;
+}
+h1{
+    text-align: center;
+}
+.round-history{
+    display: flex;
+    flex-direction: column;    
 }
