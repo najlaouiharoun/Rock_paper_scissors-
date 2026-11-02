@@ -7,9 +7,9 @@ function playRound(humanChoice, ComputerChoice) {
     //go case by case to find the winner and loser
     switch (humanChoice) {
 
-        case "rock":
+        case ROCK:
             switch (ComputerChoice) {
-                case "scissors":
+                case SCISSORS:
                     return winMessage(humanChoice,ComputerChoice)
                     break;
             
@@ -20,9 +20,9 @@ function playRound(humanChoice, ComputerChoice) {
             }
             
             break;
-        case "paper":
+        case PAPER:
             switch (ComputerChoice) {
-                case "rock":
+                case ROCK:
                     return winMessage(humanChoice,ComputerChoice)
 
                     break;
@@ -33,9 +33,9 @@ function playRound(humanChoice, ComputerChoice) {
             }
             
             break;
-        case "scissors":
+        case SCISSORS:
             switch (ComputerChoice) {
-                case "paper":
+                case PAPER:
                     return winMessage(humanChoice,ComputerChoice)
 
                     break;
@@ -53,16 +53,16 @@ function playRound(humanChoice, ComputerChoice) {
 function winMessage(humanChoice,ComputerChoice) {
     const winMessage = document.querySelector("#win-message");
     winMessage.textContent = 'you win!' + humanChoice + " beats " + ComputerChoice ; 
-    return "human"
+    return HUMAN
 }
 
 function loseMessage(humanChoice,ComputerChoice) {
     const winMessage = document.querySelector("#win-message");
     winMessage.textContent='you lose!' + ComputerChoice + " beats " + humanChoice;  
-    return "computer"
+    return COMPUTER
 }
 function tieMessage(humanChoice) {
     const winMessage = document.querySelector("#win-message");
     winMessage.textContent="it's a tie! both players chose " + humanChoice
-    return "tie"
+    return TIE
 }

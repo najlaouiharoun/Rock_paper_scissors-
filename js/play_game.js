@@ -3,10 +3,10 @@ function playGame(humanSelection,rounds,humanScore,computerScore) {
         computerSelection = getComputerChoice();
         let winner = playRound(humanSelection,computerSelection)
         switch (winner) {
-            case "computer":
+            case COMPUTER:
                 computerScore++
                 break;
-            case "human":
+            case HUMAN:
                 humanScore++
                 break;
             default:

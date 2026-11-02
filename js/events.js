@@ -4,7 +4,7 @@ rpsChoiceList.addEventListener("click",(event)=>{
     
     let target = event.target
     let outcome = []
-    if (target.id && (target.id == "rock" ||target.id == "paper" ||target.id == "scissors" )) {
+    if (target.id && (target.id === ROCK ||target.id ===  PAPER ||target.id === SCISSORS )) {
         //playgame isn't modifying the variables outside it's scope, it's now returning an array
         //0 = rounds, 1 = humanScore, 2 = computerScore 
         outcome = playGame(target.id,rounds,humanScore,computerScore)
@@ -24,13 +24,13 @@ rpsChoiceList.addEventListener("click",(event)=>{
 }
 
 function soreBoardMessage(rounds,humanScore,computerScore) {
-    scoreBoard = document.querySelector("#score-board")
+    const scoreBoard = document.querySelector("#score-board")
     scoreBoard.textContent = "ROUND " + rounds + " PLAYER SCORE: " +humanScore + " COMPUTER SCORE: " + computerScore
 }
 
 function appendRoundHistory(humanScore,computerScore) {
-    roundHistory = document.querySelector("#round-history")
-    winnerOfTheSet = document.createElement("div")
+    const roundHistory = document.querySelector("#round-history")
+    const winnerOfTheSet = document.createElement("div")
     winnerOfTheSet.textContent = "Set:  " + (roundHistory.childElementCount + 1) + " final score! computer: " + computerScore + "   human:" + humanScore;
     roundHistory.appendChild(winnerOfTheSet)
 }

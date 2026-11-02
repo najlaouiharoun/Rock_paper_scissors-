@@ -4,16 +4,15 @@ function getComputerChoice() {
     //return a string: rock, paper, or scissors depending on the computers choice
     switch (ComputerChoice) {
         case 1:
-            return "rock"
+            return ROCK
             break;
         case 2:
-            return "paper"
+            return PAPER
             
             break;
         case 3:
-            return "scissors"
+            return SCISSORS
             
             break;
     }
-    return "unknown error encountered with computer choice " + ComputerChoice
 }
