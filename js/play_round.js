@@ -53,16 +53,21 @@ function playRound(humanChoice, ComputerChoice) {
 function winMessage(humanChoice,ComputerChoice) {
     const winMessage = document.querySelector("#win-message");
     winMessage.textContent = 'you win!' + humanChoice + " beats " + ComputerChoice ; 
+    recolorBackground(HUMAN)
+
     return HUMAN
 }
 
 function loseMessage(humanChoice,ComputerChoice) {
     const winMessage = document.querySelector("#win-message");
     winMessage.textContent='you lose!' + ComputerChoice + " beats " + humanChoice;  
+    recolorBackground(COMPUTER)
+
     return COMPUTER
 }
 function tieMessage(humanChoice) {
     const winMessage = document.querySelector("#win-message");
     winMessage.textContent="it's a tie! both players chose " + humanChoice
+    recolorBackground(TIE)
     return TIE
 }

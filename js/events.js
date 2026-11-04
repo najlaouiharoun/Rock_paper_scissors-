@@ -14,9 +14,11 @@ rpsChoiceList.addEventListener("click",(event)=>{
         soreBoardMessage(rounds,humanScore,computerScore) 
         if (rounds === 5) {
             appendRoundHistory(humanScore,computerScore);
+            applyRoundWinnerColors(humanScore,computerScore)
             rounds = 0;
             computerScore = 0;
             humanScore = 0;
+
         }
     }
 
@@ -33,4 +35,18 @@ function appendRoundHistory(humanScore,computerScore) {
     const winnerOfTheSet = document.createElement("div")
     winnerOfTheSet.textContent = "Set:  " + (roundHistory.childElementCount + 1) + " final score! computer: " + computerScore + "   human:" + humanScore;
     roundHistory.appendChild(winnerOfTheSet)
+}
+function applyRoundWinnerColors(humanScore,computerScore) {
+    if(humanScore>computerScore){
+        recolorBackground(WIN)
+        return
+    }
+    if(humanScore< computerScore){
+        recolorBackground(LOSE)
+        return
+    }
+    recolorBackground(TIE)
+    return
+
+    
 }

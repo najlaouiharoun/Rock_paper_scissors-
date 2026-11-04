@@ -10,22 +10,26 @@
     <script  src="js/events.js" defer></script>
     <script  src="js/play_round.js" defer></script>
     <script  src="js/rand.js"></script>
-    <script  src="js/get_human_choice.js" defer></script>
     <script  src="js/get_computer_choice.js" defer></script>
     <script  src="js/play_game.js" defer></script>
     <script  src="js/main.js" defer></script>
+    <script  src="js/recolor_background.js" defer></script>
+
 
 </head>
 <body>
-    <h1> rock! paper! scissors!</h1>
-    <div class="score-board" id="score-board"> i'll keep track of the score</div>
+    <h1 class="title"> rock! paper! scissors!</h1>
+    <div class="game">
+    <h2 class="score-board" id="score-board"> i'll keep track of the score!</h2>
     <ul id="rps-choice-list">
         <li><button id="rock">rock</button></li>
         <li><button id="paper">paper</button></li>
         <li><button id="rock">scissors</button></li>
 
     </ul>    
-    <div class="win-message" id="win-message">ready to play?</div>
-    <div class="round-history" id="round-history"></div>
+    <p class="win-message" id="win-message">ready to play?</p>
+    </div>
+    <div class="round-history" id="round-history"> <h2>i'll log your games!</h2></div>
+
 </body>
 </html>
