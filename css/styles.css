@@ -44,6 +44,7 @@ h1{
 .round-history{
     display: flex;
     flex-direction: column;    
+    color: white;
 }
 button{
     background-color: brown;
